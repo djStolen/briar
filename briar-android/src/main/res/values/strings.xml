@@ -480,6 +480,14 @@
 	</plurals>
 	<string name="nobody">Nobody</string>
 
+    <!-- Vote Counting Forum -->
+    <string name="name_empty">Forum name cannot be empty.</string>
+    <string name="forum_type_label">Forum Type:</string>
+    <string name="forum_type_standard">Standard Forum</string>
+    <string name="forum_type_vote_counting">Vote Counting Forum</string>
+    <string name="forum_creation_failed">Failed to create forum. Please try again.</string>
+    <string name="forum_creation_failed_generic">An unexpected error occurred while creating the forum.</string>
+
 	<!-- Blogs -->
 	<string name="blogs_other_blog_empty_state">No posts to show</string>
 	<string name="read_more">read more</string>

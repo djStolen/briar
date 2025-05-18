@@ -7,17 +7,24 @@ import dagger.Binds;
 import dagger.Module;
 import dagger.multibindings.IntoMap;
 
+import org.briarproject.briar.api.forum.voting.VoteCountingForumFactoryImpl;
+import org.briarproject.briar.api.forum.voting.VoteCountingForumFactory;
+
 @Module
-public interface ForumModule {
+public abstract class ForumModule {
 
-	@Binds
-	@IntoMap
-	@ViewModelKey(ForumListViewModel.class)
-	ViewModel bindForumListViewModel(ForumListViewModel forumListViewModel);
+    @Binds
+    abstract VoteCountingForumFactory bindVoteCountingForumFactory(
+            VoteCountingForumFactoryImpl impl
+    );
 
-	@Binds
-	@IntoMap
-	@ViewModelKey(ForumViewModel.class)
-	ViewModel bindForumViewModel(ForumViewModel forumViewModel);
+    @Binds
+    @IntoMap
+    @ViewModelKey(ForumListViewModel.class)
+    abstract ViewModel bindForumListViewModel(ForumListViewModel forumListViewModel);
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(ForumViewModel.class)
+    abstract ViewModel bindForumViewModel(ForumViewModel forumViewModel);
 }

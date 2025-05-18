@@ -86,6 +86,8 @@ import org.briarproject.briar.android.test.TestDataActivity;
 
 import dagger.Component;
 
+import org.briarproject.briar.android.forum.ForumModule;
+
 @ActivityScope
 @Component(modules = {
 		ActivityModule.class,
@@ -93,7 +95,8 @@ import dagger.Component;
 		GroupInvitationModule.class,
 		GroupMemberModule.class,
 		GroupRevealModule.class,
-		SharingModule.SharingLegacyModule.class
+		SharingModule.SharingLegacyModule.class,
+		ForumModule.class // Ensure this module is included
 }, dependencies = AndroidComponent.class)
 public interface ActivityComponent {
 
